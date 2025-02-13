@@ -9,5 +9,7 @@ logging.basicConfig( # configure logging
 for i in range(3):
     try:
         result = i/0
-    except ZeroDivisionError:
+    except ZeroDivisionError as err:
+        # print(dir(err))
+        # print(err.with_traceback())
         logging.exception('Logging with exception info') # add exception info to the log

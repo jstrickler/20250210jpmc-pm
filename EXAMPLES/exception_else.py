@@ -10,4 +10,6 @@ for x, y in numpairs:
         print(f"uh-oh, when y = {y}, {err}")
     else:
         total += quotient  # Only if no exceptions were raised
+    finally:
+        print("ALL DONE")
 print(total)
