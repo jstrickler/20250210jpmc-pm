@@ -21,6 +21,7 @@ print(airports['SLC'])  # print value where key is 'SLC'
 
 code = 'PSP'
 
+# if KEY in DICT
 if code in airports:   # is key in dictionary?
     print(airports[code])  # print key if key is in dictionary
 else:
@@ -31,3 +32,10 @@ print(airports.get(code, 'NO SUCH AIRPORT'))  # get value if key in dict, otherw
 
 print(airports.setdefault(code, 'Palm Springs'))  # get value if key in dict, otherwise get 'Palm Springs' AND set key
 print(code in airports)  # check for key in dict
+print(f"{airports = }")
+print('-' * 60)
+print(f"{airports.keys() = }")
+print(f"{airports.values() = }")
+print()
+for code, airport in airports.items():
+    print(code, airport)

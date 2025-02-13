@@ -5,3 +5,7 @@ fruits = [
     'BaNaNa', 'Persimmon   '
 ]
 
+# **
+#  2 ** 5
+#  pow(2, 5)
+#  print(f"2 ^ {e} is {2 ** e}"")

@@ -5,10 +5,14 @@ mary_in = open(FILE_NAME)  # open file for reading
 # read file...
 mary_in.close()  # close file (easy to forget to do this!)
 
+# with expr as variable:
+#    ...
+
 with open(FILE_NAME) as mary_in:  # open file for reading
     for raw_line in mary_in:  # iterate over lines in file (line retains \n)
+        # print(repr(raw_line))
         line = raw_line.rstrip()  # rstrip('') removes whitespace (including \n or \r ) from end of string
-        print(line)
+        # print(repr(line))
 print('-' * 60)
 
 with open(FILE_NAME) as mary_in:
@@ -26,5 +30,5 @@ with open(FILE_NAME) as mary_in:
 print('-' * 60)
 
 with open(FILE_NAME) as mary_in:
-    lines_without_nl = mary_in.read().splitlines()  # splitlines() splits string on ' ' into lines
+    lines_without_nl = mary_in.read().splitlines()  # splitlines() splits string on '\n' into lines
     print(lines_without_nl)

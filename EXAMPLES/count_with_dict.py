@@ -8,5 +8,8 @@ with open("../DATA/breakfast.txt") as breakfast_in:
         else:
             counts[breakfast_item] = 1 # else add new element 
 
-for item, count in counts.items():
+for item, count in sorted(counts.items()):
+    print(item, count)
+print('-' * 60)
+for item, count in sorted(counts.items(), key=lambda e: (e[1], e[0]), reverse=True):
     print(item, count)
